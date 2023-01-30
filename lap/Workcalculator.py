@@ -8,18 +8,19 @@ class Workcalculator:
         self._TPB = trees
         self.sum_of_weight = 0
         self.sum_of_tree = 0
+        
 
         try:
             self.db = pd.read_excel(
-                f'{file}.xlsx', sheet_name=self.sheet, index_col='Name')
+                f'{file}', sheet_name=self.sheet, index_col='Name')
         except Exception as err:
             return err
         
-
         self.salary = self.db['money']
 
     def Normal_case(self, weight: int):
         try:
+            self.col = self.data
             for i in range(len(weight)):
                 self.round = f'{self.sheet}{i+1}'
                 self.worker = self.db[self.round]

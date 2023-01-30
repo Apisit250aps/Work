@@ -1,7 +1,7 @@
-from Workcalculator import Workcalculator
+from lap.Workcalculator import Workcalculator
 from Excelwriter import Excelwriter as Write
 import pandas as pd
-wc = Workcalculator(file='Work1',sheet='i', weights=250, trees=200)
+wc = Workcalculator(file='datas/Work1.xlsx',sheet='i', weights=250, trees=200)
 
 weightss = [9800, 9875, 9870, 9789]
 
